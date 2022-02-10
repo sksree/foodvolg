@@ -1,4 +1,9 @@
+
+{% extends 'mainheader.html' %}
 {% load static %}
+
+
+
 
 
 <!--
@@ -9,51 +14,45 @@ Copyright: OS-Templates.com
 Licence: Free to use under our free template licence terms
 Licence URI: https://www.os-templates.com/template-terms
 -->
-<html lang="">
-<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
-<head>
-<title>Foxclore</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="{% static 'hm/layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
+{% block content%}
+
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('{% static 'hm/images/demo/backgrounds/s1.JPEG' %}');">
-  <!-- ################################################################################################ -->
-  <header id="header" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div id="logo" class="one_quarter first">
-      <h1><a href="index.html">SK SHOP</a></h1>
-      <p>Pick Perfect and healthy</p>
-    </div>
-    
-    <!-- ################################################################################################ -->
-  </header>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <section id="navwrapper" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <nav id="mainav">
-      <ul class="clear">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a class="drop" href="#">Pages</a>
-          <ul>
-            <li><a href="{% static 'hm/pages/gallery.html' %}">Gallery</a></li>
-            <li><a href="{% static 'hm/pages/full-width.html' %}">Full Width</a></li>
-            <li><a href="{% static 'hm/pages/sidebar-left.html' %}">Sidebar Left</a></li>
-            <li><a href="{% static 'hm/pages/sidebar-right.html' %}">Sidebar Right</a></li>
-            <li><a href="{% static 'hm/pages/basic-grid.html' %}">Basic Grid</a></li>
-            <li><a href="{% static 'hm/pages/font-icons.html' %}">Font Icons</a></li>
-          </ul>
-        </li>
-       
-      </ul>
-    </nav>
+<!--<div class="bgded overlay" style="background-image:url('{% static 'hm/images/demo/backgrounds/s1.JPEG' %}');">-->
+<!--  &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--  <header id="header" class="hoc clear"> -->
+<!--    &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--    <div id="logo" class="one_quarter first">-->
+<!--      <h1><a href="index.html">SK SHOP</a></h1>-->
+<!--      <p>Pick Perfect and healthy</p>-->
+<!--    </div>-->
+<!--    -->
+<!--    &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--  </header>-->
+<!--  &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--  &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--  &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--  <section id="navwrapper" class="hoc clear"> -->
+<!--    &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--    <nav id="mainav">-->
+<!--      <ul class="clear">-->
+<!--        <li class="active"><a href="index.html">Home</a></li>-->
+<!--        <li><a class="drop" href="#">Pages</a>-->
+<!--          <ul>-->
+<!--            <li><a href="{% static 'hm/pages/gallery.html' %}">Gallery</a></li>-->
+<!--            <li><a href="{% static 'hm/pages/full-width.html' %}">Full Width</a></li>-->
+<!--            <li><a href="{% static 'hm/pages/sidebar-left.html' %}">Sidebar Left</a></li>-->
+<!--            <li><a href="{% static 'hm/pages/sidebar-right.html' %}">Sidebar Right</a></li>-->
+<!--            <li><a href="{% static 'hm/pages/basic-grid.html' %}">Basic Grid</a></li>-->
+<!--            <li><a href="{% static 'hm/pages/font-icons.html' %}">Font Icons</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+<!--       -->
+<!--      </ul>-->
+<!--    </nav>-->
     <!-- ################################################################################################ -->
     <div id="searchform">
       <div>
@@ -146,5 +145,6 @@ Licence URI: https://www.os-templates.com/template-terms
 <script src="{% static 'hm/layout/scripts/jquery.min.js' %}"></script>
 <script src="{% static 'hm/layout/scripts/jquery.backtotop.js' %}"></script>
 <script src="{% static 'hm/layout/scripts/jquery.mobilemenu.js' %}"></script>
-</body>
-</html>
+
+
+{% endblock %}
