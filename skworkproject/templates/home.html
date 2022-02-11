@@ -80,28 +80,37 @@ Licence URI: https://www.os-templates.com/template-terms
     </article>
     <!-- ################################################################################################ -->
   </div>
+<div class="category">
+
+  {% for i in ct %}
+   <b style="color:white">
+     {{i.name}}<br>
+   </b>
+  {% endfor %}
+</div>
   <!-- ################################################################################################ -->
 </div>
-<!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
+
+
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
     <section id="introblocks">
       <ul class="nospace group">
-        --------------------
+
+        {% for i in pr %}
         <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="{% static 'hm/images/demo/348x220.png' %}" alt=""></a>
+          <figure><a class="imgover" href="#"><img src="{{i.img.url}}" alt=""></a>
             <figcaption>
-              <h6 class="heading">Volutpat sed quis</h6>
-              <p>Vel nisi semper adipiscing maecenas sodales elit cras porttitor diam aliquam turpis quisque rhoncus tincidunt.</p>
+              <h6 class="heading">{{i.name}}</h6>
+              <p>{{i.desc|truncatewords:17}}</p>
+              <p> <b>price:{{i.price}} Rs</b></p>
+              <p> stock:{{i.stock}} </p>
             </figcaption>
           </figure>
         </li>
-        -------------------------
+        {% endfor %}
+
         
         
        
