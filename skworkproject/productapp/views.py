@@ -1,9 +1,23 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from . models import *
 
 # Create your views here.
-def home(request):
-    prod=products.objects.all()
-    ct=categ.objects.all()
-    return render(request,"home.html",{'pr':prod,'ct':ct})
+def home(request,c_slug=None):
+    c_page = None
+    prodt = None
+    if c_slug != None:
+        c_page=get_object_or_404(categ,slug=c_slug)
+        prodt=products.objects.filter(category=c_page,available=True)
+    else:
+        prodt=products.objects.all().filter(available=True)
+    cat=categ.objects.all()
+    return render(request,"home.html",{'pr':prodt,'ct':cat})
+
+
+def proddetails(request,c_slug,product_slug):
+    try:
+        prod=products.objects.get(category__slug=c_slug,slug=product_slug)
+    except Exception as e:
+        raise e
+    return render(request,'details.html',{'pr':prod})

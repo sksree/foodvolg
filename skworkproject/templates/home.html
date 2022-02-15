@@ -78,16 +78,22 @@ Licence URI: https://www.os-templates.com/template-terms
       <p>Your health and taste is our priority</p>
       <!-- <footer><a class="btn" href="#"></a></footer> -->
     </article>
+    <div class="dropdown">
+
+  <button class="dropbtn">Our Items</button>
+  <div class="dropdown-content">
+
+   {% for i in ct %}
+  <a href="{{i.get_url}}">{{i.name}}</a>
+
+    {% endfor %}
+  </div>
+
+</div>
     <!-- ################################################################################################ -->
   </div>
-<div class="category">
 
-  {% for i in ct %}
-   <b style="color:white">
-     {{i.name}}<br>
-   </b>
-  {% endfor %}
-</div>
+
   <!-- ################################################################################################ -->
 </div>
 
@@ -100,12 +106,10 @@ Licence URI: https://www.os-templates.com/template-terms
 
         {% for i in pr %}
         <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="{{i.img.url}}" alt=""></a>
+          <figure><a class="imgover" href="{{i.get_url}}"><img src="{{i.img.url}}" style="height:250px ;width:350px" alt=""></a>
             <figcaption>
               <h6 class="heading">{{i.name}}</h6>
-              <p>{{i.desc|truncatewords:17}}</p>
-              <p> <b>price:{{i.price}} Rs</b></p>
-              <p> stock:{{i.stock}} </p>
+
             </figcaption>
           </figure>
         </li>

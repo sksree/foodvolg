@@ -9,5 +9,7 @@ admin.site.register(categ,catadmin)
 
 class proadmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('name',)}
+    list_display = ['name','slug','price','stock','img']
+    list_editable = ['price','stock','img']
 admin.site.register(products,proadmin)
 

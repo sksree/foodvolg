@@ -1,0 +1,37 @@
+
+{% load static %}
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'hm/layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<div class="bgded overlay" style="background-image:url('{% static 'hm/images/demo/backgrounds/s1.JPEG' %}');">
+  <!-- ################################################################################################ -->
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="one_quarter first">
+      <h1><a href="/">SK SHOP</a></h1>
+      <p>Pick Perfect and healthy</p>
+       </header>
+    </div>
+
+    <!-- ################################################################################################ -->
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+
+    <!-- ################################################################################################ -->
+
+    {% block content%}
+    {% endblock %}
+
+</body>
+</html>
