@@ -1,9 +1,9 @@
 
-{% extends 'mainheader.html' %}
+{% extends 'subheader.html' %}
 {% load static %}
 
 
-
+{% block content %}
 
 
 <!--
@@ -14,7 +14,7 @@ Copyright: OS-Templates.com
 Licence: Free to use under our free template licence terms
 Licence URI: https://www.os-templates.com/template-terms
 -->
-{% block content%}
+
 
 
 <!-- ################################################################################################ -->
@@ -54,57 +54,13 @@ Licence URI: https://www.os-templates.com/template-terms
 <!--      </ul>-->
 <!--    </nav>-->
     <!-- ################################################################################################ -->
-    <div id="searchform">
-      <div>
-        <form action="{% url 'search' %}" method="get">
-          <fieldset>
-            <legend>Quick Search:</legend>
-            <input type="text" placeholder="Enter search item" name="q">
-            <button type="submit"><i class="fas fa-search"></i></button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <!-- ################################################################################################ -->
-  </section>
+
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <article>
-      <p></p>
-      <h3 class="heading">S K SHOP</h3>
-      <p>Your health and taste is our priority</p>
-      <!-- <footer><a class="btn" href="#"></a></footer> -->
-    </article>
-    <div class="dropdown">
-
-  <button class="dropbtn">Our Items</button>
-  <div class="dropdown-content">
-
-   {% for i in ct %}
-  <a href="{{i.get_url}}">{{i.name}}</a>
-
-    {% endfor %}
-  </div>
-
-</div>
-    <!-- ################################################################################################ -->
-  </div>
-
-
-  <!-- ################################################################################################ -->
-</div>
-
-
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <section id="introblocks">
-      <ul class="nospace group">
-
-        {% for i in pr %}
+  <br>
+<br><div >
+    <!  {% for i in pr %}
         <li class="one_third">
           <figure><a class="imgover" href="{{i.get_url}}"><img src="{{i.img.url}}" style="height:250px ;width:350px" alt=""></a>
             <figcaption>
@@ -115,9 +71,20 @@ Licence URI: https://www.os-templates.com/template-terms
         </li>
         {% endfor %}
 
-        
-        
-       
+</div>
+
+
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <ul class="nospace group">
+
+
+
+
+
+
       </ul>
     </section>
     <!-- ################################################################################################ -->
@@ -143,7 +110,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
+  <div id="copyright" class="hoc clear">
     <!-- ################################################################################################ -->
     <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
     <p class="fl_right"> <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
