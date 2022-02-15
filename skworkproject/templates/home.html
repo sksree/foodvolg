@@ -104,7 +104,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <section id="introblocks">
       <ul class="nospace group">
 
-        {% for i in pr %}
+        {% for i in pg.object_list %}
         <li class="one_third">
           <figure><a class="imgover" href="{{i.get_url}}"><img src="{{i.img.url}}" style="height:250px ;width:350px" alt=""></a>
             <figcaption>
@@ -116,15 +116,19 @@ Licence URI: https://www.os-templates.com/template-terms
         {% endfor %}
 
         
-        
+
        
       </ul>
     </section>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
+
   </main>
 </div>
+<center>{% for p in pg.paginator.page_range %}
+<a href="?page={{p}}" class="btn btn-danger btn-sm" {% if pg.number == p %} active {% endif %}>{{p}}</a>
+{% endfor %}</center><br>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->

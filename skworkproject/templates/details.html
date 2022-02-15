@@ -1,6 +1,6 @@
 
 
-{% extends 'subheader.html' %}
+{% extends 'mainheader.html' %}
 {% load static %}
 
 
@@ -40,18 +40,23 @@ https://templatemo.com/tm-544-comparto
             <div class="tm-row tm-about-row">
                 <div class="tm-section-1-l">
                     <img src="{{pr.img.url}}" height="500" width="500" alt="About image" class="tm-img-responsive">
-                </div>
+                </div><br>
                 <article class="tm-section-1-r tm-bg-color-8">
                     <h2 class="tm-mb-2 tm-title-color">{{pr.name}}</h2>
                         <p>{{pr.desc}}</p>
               <p> <b>price:{{pr.price}} Rs</b></p>
               <p> stock:{{pr.stock}} </p>
-                    <a href="#services" class="tm-btn tm-btn-1 tm-link-to-services">Add to cart</a>
+                    <a href="#services" class="tm-btn tm-btn-1 tm-link-to-services"><button class="btn btn-success">Add to cart</button></a>
                 </article>
             </div>
         </section>
+<br>
+<br><br>
+<br>
 {% endblock %}
+
 </body>
+
 </html>
 
 
